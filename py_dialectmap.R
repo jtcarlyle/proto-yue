@@ -1,5 +1,3 @@
-setwd("C:/Users/JohnCarlyle/Documents/ProtoYue")
-
 rm(list = ls())
 library(ggplot2)
 library(ggmap)
@@ -168,8 +166,6 @@ meta_data$fill_c <- c(hue_pal(l = 50)(15)[c(5, 8, 11)],
                       #"lightsalmon",
                       hue_pal(l = 75)(22)[c(1,17)], "coral2", "darkorange", #18
                       hue_pal(l = 85, c = 80)(22)[c(2, 20, 4)], NA)
-
-show_col(hue_pal(l = 75)(22))
 
 CHN_adm3_f <- plyr::join(CHN_adm3_f, meta_data, by="dialect")
 HK1_f <- plyr::join(HK1_f, meta_data, by="dialect")
